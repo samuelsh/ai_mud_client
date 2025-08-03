@@ -1,0 +1,189 @@
+{
+    "server": {
+        "host": "moo.sindome.org",
+        "port": 5555,
+        "name": "Sindome",
+        "description": "Sindome - A cyberpunk MUD/MOO"
+    },
+    "bot": {
+        "name": "sindomebot",
+        "character_name": "sindomebot",
+        "auto_login": true,
+        "auto_delay_min": 1.0,
+        "auto_delay_max": 3.0,
+        "max_command_history": 50
+    },
+    "ai": {
+        "strategy": "explorer",
+        "weights": {
+            "explorer": {
+                "explore": 0.4,
+                "loot": 0.3,
+                "combat": 0.2,
+                "rest": 0.1
+            },
+            "combat_focused": {
+                "combat": 0.5,
+                "explore": 0.2,
+                "loot": 0.2,
+                "rest": 0.1
+            },
+            "farmer": {
+                "loot": 0.5,
+                "explore": 0.3,
+                "combat": 0.1,
+                "rest": 0.1
+            }
+        }
+    },
+    "game_specific": {
+        "login_prompts": [
+            "what is your name",
+            "enter your name", 
+            "character name",
+            "login:",
+            "username:",
+            "account:",
+            "enter your character's name"
+        ],
+        "password_prompts": [
+            "password:",
+            "enter password",
+            "pass:",
+            "what is your password"
+        ],
+        "character_creation_prompts": [
+            "create character",
+            "new character",
+            "create a character",
+            "character creation",
+            "new player"
+        ],
+        "character_creation_menu_option": "2",
+        "name_selection_prompts": [
+            "what is the name you wish to use",
+            "name you wish to use"
+        ],
+        "password_setup_prompts": [
+            "password",
+            "new",
+            "create"
+        ],
+        "password_confirmation_prompts": [
+            "confirm your password"
+        ],
+        "gender_selection_prompts": [
+            "gender selection"
+        ],
+        "gender_options": {
+            "male": "1",
+            "female": "2"
+        },
+        "race_selection_prompts": [
+            "choose race",
+            "select race",
+            "what race",
+            "race selection"
+        ],
+        "class_selection_prompts": [
+            "choose class",
+            "select class",
+            "what class",
+            "class selection"
+        ],
+        "city_selection_prompts": [
+            "city selection"
+        ],
+        "service_agreement_prompts": [
+            "service agreement"
+        ],
+        "screenreader_prompts": [
+            "screenreader tools"
+        ],
+        "character_creation_success": [
+            "character created successfully",
+            "new character created",
+            "character is ready"
+        ],
+        "welcome_messages": [
+            "welcome"
+        ],
+        "default_password": "password123",
+        "default_race": "human",
+        "default_class": "monk",
+        "default_city": "ashtan",
+        "default_gender": "male",
+        "fantasy_names": [
+            "Aethon", "Bael", "Cael", "Dain", "Eir", "Fael", "Gael", "Hael", "Iris", "Jael"
+        ],
+        "movement_commands": [
+            "north", "south", "east", "west", "up", "down", "n", "s", "e", "w", "u", "d",
+            "northeast", "northwest", "southeast", "southwest", "ne", "nw", "se", "sw", "in", "out"
+        ],
+        "combat_commands": [
+            "attack", "kill", "cast", "spell", "flee", "writhe", "compose", "parry", "dodge"
+        ],
+        "inventory_commands": [
+            "get", "take", "drop", "wear", "remove", "inventory", "put", "give", "equipment", "open", "close"
+        ],
+        "healing_commands": [
+            "eat bloodroot", "apply caloric", "compose", "writhe", "pray for salvation", "rest", "sleep"
+        ],
+        "social_commands": [
+            "say", "tell", "emote", "who", "newbie", "house", "city", "shout", "whisper"
+        ],
+        "system_commands": [
+            "look", "examine", "status", "quit", "save", "help", "portal", "score", "health", "mana", "experience", "gold", "level"
+        ],
+        "special_commands": [
+            "portal", "hint", "newbie help", "swim", "open door", "newbieon", "hintson", "speedup"
+        ],
+        "affliction_remedies": {
+            "paralysis": "eat bloodroot",
+            "paralyzed": "eat bloodroot",
+            "fear": "compose",
+            "frozen": "apply caloric",
+            "webbing": "writhe",
+            "webs": "writhe"
+        },
+        "status_patterns": {
+            "health_mana": [
+                "\\d+h, \\d+m",
+                "\\d+h/\\d+m",
+                "\\d+ health, \\d+ mana"
+            ],
+            "experience": [
+                "\\d+ experience",
+                "exp: \\d+"
+            ],
+            "gold": [
+                "\\d+ gold",
+                "gold: \\d+"
+            ]
+        },
+        "room_patterns": {
+            "room_name": "(.+?)\\.\\s*\\((\\w+)\\)",
+            "exits": "exits?:\\s*(.+)",
+            "items": "you see:\\s*(.+)",
+            "npcs": [
+                "([A-Z][a-z]+(?:\\s+[a-z]+)*)\\s+is\\s+here",
+                "You see ([A-Z][a-z]+(?:\\s+[a-z]+)*)\\s+here"
+            ]
+        },
+        "cooldowns": {
+            "hint": 30,
+            "newbie_help": 60,
+            "character_creation": 3
+        },
+        "excluded_words": [
+            "adventurers",
+            "questions",
+            "option"
+        ]
+    },
+    "logging": {
+        "level": "DEBUG",
+        "file": "mud_bot.log",
+        "format": "%(asctime)s - %(levelname)s - %(message)s"
+    }
+} 

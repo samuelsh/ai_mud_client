@@ -1,0 +1,277 @@
+{
+    "server": {
+        "host": "www.cybersphere.net",
+        "port": 7777,
+        "name": "Cybersphere",
+        "description": "Cybersphere - A cyberpunk MUD"
+    },
+    "bot": {
+        "name": "cyberspherebot",
+        "character_name": "cyberspherebot",
+        "auto_login": true,
+        "auto_delay_min": 1.0,
+        "auto_delay_max": 3.0,
+        "max_command_history": 50,
+        "need_character_creation": true,
+        "max_reconnect_attempts": 3
+    },
+    "ai": {
+        "strategy": "explorer",
+        "weights": {
+            "explorer": {
+                "explore": 0.4,
+                "loot": 0.3,
+                "combat": 0.2,
+                "rest": 0.1
+            },
+            "combat_focused": {
+                "combat": 0.5,
+                "explore": 0.2,
+                "loot": 0.2,
+                "rest": 0.1
+            },
+            "farmer": {
+                "loot": 0.5,
+                "explore": 0.3,
+                "combat": 0.1,
+                "rest": 0.1
+            },
+            "social": {
+                "social": 0.4,
+                "explore": 0.3,
+                "loot": 0.2,
+                "rest": 0.1
+            },
+            "adventurer": {
+                "combat": 0.3,
+                "explore": 0.3,
+                "loot": 0.3,
+                "rest": 0.1
+            }
+        }
+    },
+    "game_specific": {
+        "login_prompts": [
+            "what is your name",
+            "enter your name", 
+            "character name",
+            "login:",
+            "username:",
+            "account:",
+            "enter your character's name",
+            "name:",
+            "who are you",
+            "what's your name",
+            "connect <username> <password>",
+            "connect guest"
+        ],
+        "password_prompts": [
+            "password:",
+            "enter password",
+            "pass:",
+            "what is your password",
+            "password",
+            "enter your password"
+        ],
+        "character_creation_prompts": [
+            "create character",
+            "new character",
+            "create a character",
+            "character creation",
+            "new player",
+            "create account",
+            "new account",
+            "register",
+            "sign up",
+            "@register",
+            "type @register"
+        ],
+        "character_creation_menu_option": "1",
+        "name_selection_prompts": [
+            "what is the name you wish to use",
+            "name you wish to use",
+            "enter your character name",
+            "character name:",
+            "name:",
+            "what name",
+            "choose a name"
+        ],
+        "password_setup_prompts": [
+            "password",
+            "new password",
+            "create password",
+            "enter password",
+            "choose password"
+        ],
+        "password_confirmation_prompts": [
+            "confirm your password",
+            "confirm password",
+            "re-enter password",
+            "verify password"
+        ],
+        "gender_selection_prompts": [
+            "gender selection",
+            "choose gender",
+            "select gender",
+            "what gender",
+            "gender:",
+            "male or female"
+        ],
+        "gender_options": {
+            "male": "1",
+            "female": "2"
+        },
+        "race_selection_prompts": [
+            "choose race",
+            "select race",
+            "what race",
+            "race selection",
+            "race:",
+            "pick a race"
+        ],
+        "class_selection_prompts": [
+            "choose class",
+            "select class",
+            "what class",
+            "class selection",
+            "class:",
+            "pick a class"
+        ],
+        "city_selection_prompts": [
+            "city selection",
+            "choose city",
+            "select city",
+            "what city",
+            "city:",
+            "pick a city"
+        ],
+        "service_agreement_prompts": [
+            "service agreement",
+            "terms of service",
+            "agreement",
+            "accept terms",
+            "agree to terms"
+        ],
+        "screenreader_prompts": [
+            "screenreader tools",
+            "accessibility",
+            "screen reader"
+        ],
+        "character_creation_success": [
+            "character created successfully",
+            "new character created",
+            "character is ready",
+            "welcome",
+            "character created",
+            "account created"
+        ],
+        "welcome_messages": [
+            "welcome",
+            "welcome to",
+            "you have entered",
+            "you arrive",
+            "you are now",
+            "cybersphere",
+            "connected to cybersphere"
+        ],
+        "default_password": "password123",
+        "default_race": "human",
+        "default_class": "warrior",
+        "default_city": "central",
+        "default_gender": "male",
+        "cyberpunk_names": [
+            "Neo", "Cyber", "Matrix", "Ghost", "Shadow", "Void", "Echo", "Pulse", "Flux", "Vortex",
+            "Nexus", "Zen", "Raven", "Phoenix", "Blade", "Edge", "Frost", "Storm", "Thunder", "Lightning"
+        ],
+        "movement_commands": [
+            "north", "south", "east", "west", "up", "down", "n", "s", "e", "w", "u", "d",
+            "northeast", "northwest", "southeast", "southwest", "ne", "nw", "se", "sw", "in", "out",
+            "enter", "exit", "climb", "jump", "crawl", "swim", "fly", "teleport", "warp"
+        ],
+        "combat_commands": [
+            "attack", "kill", "cast", "spell", "flee", "writhe", "compose", "parry", "dodge",
+            "shoot", "fire", "hack", "slice", "stab", "punch", "kick", "throw", "grenade"
+        ],
+        "inventory_commands": [
+            "get", "take", "drop", "wear", "remove", "inventory", "put", "give", "equipment", "open", "close",
+            "buy", "sell", "trade", "loot", "search", "scan", "analyze", "repair", "upgrade"
+        ],
+        "healing_commands": [
+            "eat bloodroot", "apply caloric", "compose", "writhe", "pray for salvation", "rest", "sleep",
+            "heal", "meditate", "repair", "regenerate", "recharge", "recover", "restore"
+        ],
+        "social_commands": [
+            "say", "tell", "emote", "who", "newbie", "house", "city", "shout", "whisper",
+            "chat", "talk", "greet", "wave", "nod", "smile", "laugh", "cry", "dance"
+        ],
+        "system_commands": [
+            "look", "examine", "status", "quit", "save", "help", "portal", "score", "health", "mana", "experience", "gold", "level",
+            "info", "stats", "skills", "abilities", "equipment", "inventory", "map", "location"
+        ],
+        "special_commands": [
+            "portal", "hint", "newbie help", "swim", "open door", "newbieon", "hintson", "speedup",
+            "hack", "scan", "analyze", "repair", "upgrade", "install", "uninstall", "configure"
+        ],
+        "affliction_remedies": {
+            "paralysis": "eat bloodroot",
+            "paralyzed": "eat bloodroot",
+            "fear": "compose",
+            "frozen": "apply caloric",
+            "webbing": "writhe",
+            "webs": "writhe",
+            "poison": "antidote",
+            "disease": "cure",
+            "blind": "restore sight",
+            "deaf": "restore hearing"
+        },
+        "status_patterns": {
+            "health_mana": [
+                "\\d+h, \\d+m",
+                "\\d+h/\\d+m",
+                "\\d+ health, \\d+ mana",
+                "HP: \\d+/\\d+",
+                "MP: \\d+/\\d+"
+            ],
+            "experience": [
+                "\\d+ experience",
+                "exp: \\d+",
+                "XP: \\d+"
+            ],
+            "gold": [
+                "\\d+ gold",
+                "gold: \\d+",
+                "credits: \\d+",
+                "money: \\d+"
+            ]
+        },
+        "room_patterns": {
+            "room_name": "(.+?)\\.\\s*\\((\\w+)\\)",
+            "exits": "exits?:\\s*(.+)",
+            "items": "you see:\\s*(.+)",
+            "npcs": [
+                "([A-Z][a-z]+(?:\\s+[a-z]+)*)\\s+is\\s+here",
+                "You see ([A-Z][a-z]+(?:\\s+[a-z]+)*)\\s+here"
+            ]
+        },
+        "cooldowns": {
+            "hint": 30,
+            "newbie_help": 60,
+            "character_creation": 3,
+            "hack": 10,
+            "scan": 5,
+            "repair": 15
+        },
+        "excluded_words": [
+            "adventurers",
+            "questions",
+            "option",
+            "menu",
+            "selection"
+        ]
+    },
+    "logging": {
+        "level": "DEBUG",
+        "file": "mud_bot.log",
+        "format": "%(asctime)s - %(levelname)s - %(message)s"
+    }
+} 
